@@ -1,0 +1,153 @@
+{
+	"intents": [
+		{
+			"name": "StopIntent",
+			"phrases": [
+				"stop",
+				"cancel",
+				"stop the app"
+			],
+			"alexa": {
+				"name": "AMAZON.StopIntent"
+			},
+			"dialogflow": {
+				"events": [
+					{
+						"name": "actions_intent_CANCEL"
+					}
+				]
+			}
+		},
+		{
+			"name": "DatesIntent",
+			"phrases": [
+				"{date}",
+				"what about {date}",
+				"what about {date} and {dateTwo}",
+				"maybe {date}",
+				"I'd prefer {date} or {date}",
+				"{date} or {dateTwo}",
+				"{date} and {dateTwo}"
+			], 
+			"inputs": [
+				{
+					"name": "date",
+					"type": {
+						"alexa": "AMAZON.DATE",
+						"dialogflow": "@sys.date"
+					}
+				},
+				{
+					"name": "dateTwo",
+					"type": {
+						"alexa": "AMAZON.DATE",
+						"dialogflow": "@sys.date"
+					}
+				}
+			]
+		},
+		{
+			"name": "SlotIntent",
+			"phrases": [
+				"{slot}",
+				"{slot} please",
+				"What about {slot}",
+				"{slot} maybe",
+				"I would prefer {slot}"
+			],
+			"inputs": [
+				{
+					"name": "slot",
+					"type": {
+						"alexa": "AMAZON.TIME",
+						"dialogflow": "@sys.time"
+					}
+				}
+			]
+		},
+		{
+			"name": "YesIntent",
+			"phrases": [
+				"Yes",
+				"yep",
+				"sure",
+				"okay",
+				"yeah"
+			],
+			"alexa": {
+				"name": "AMAZON.YesIntent"
+			}
+		},
+		{
+			"name": "NoIntent",
+			"phrases": [
+				"no",
+				"nope",
+				"na",
+				"not"
+			],
+			"alexa": {
+				"name": "AMAZON.NoIntent"
+			}
+		}
+	],
+	"inputTypes": [
+		{
+			"name": "intervals",
+			"values": [
+				{
+					"value": "noon",
+					"synonyms": [
+						"midday",
+						"noon time"
+					]
+				},
+				{
+					"value": "morning",
+					"synonyms": [
+						"morning time"
+					]
+				},
+				{
+					"value": "afternoon"
+				}
+			]
+		}
+	],
+	"alexa": {
+		"interactionModel": {
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"dialogflow": {
+		"intents": [
+			{
+				"name": "Default Fallback Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"fallbackIntent": true
+			},
+			{
+				"name": "Default Welcome Intent",
+				"auto": true,
+				"webhookUsed": true,
+				"events": [
+					{
+						"name": "WELCOME"
+					}
+				]
+			}
+		]
+	}
+}

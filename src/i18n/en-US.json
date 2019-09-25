@@ -1,0 +1,16 @@
+{
+    "translation": {
+        "component-ScheduleMeeting": {
+            "start-question": "Which days are most convenient for you?",
+            "date": "On {{day}} I have {{numberOfSlots}} open slots. For example, at <say-as interpret-as=\"time\" >{{slotOne}}</say-as>, <say-as interpret-as=\"time\" >{{slotTwo}}</say-as>, and <say-as interpret-as=\"time\" >{{slotThree}}</say-as> <say-as interpret-as=\"characters\">{{timezone}}</say-as>. Which one should it be?",
+            "invalid-date": "The dates you provided where invalid",
+            "dates-unavailable": "Sadly, there are no open meeting slots for your suggested dates.",
+            "slot-unavailable": "The slot you request is not available. Please choose a different one.",
+            "slot-confirmation": "Are you sure you want to book a meeting on {{dayOfWeek}} the {{date}} at <say-as interpret-as=\"time\" >{{time}}</say-as>?",
+            "help": "You can schedule a meeting by telling me your preferred dates.",
+            "slot-confirmation-denied": "Ok, either choose a new date or a new slot for the current one!",
+            "email-rejected": "To send you the necessary meeting details I need your email address.",
+            "email-error": "We bumped into an error. Please try again."
+        }
+    }
+}

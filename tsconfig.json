@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "lib": [ "es2017" ],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "removeComments": false,
+    "allowUnreachableCode": false,
+    "noImplicitReturns": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "strict": true,
+    "outDir": "./dist/",
+    "target": "es2017",
+    "sourceMap": true
+  },
+  "include": [
+    "**/*.d.ts",
+    "index.ts",
+    "src/**/*",
+    "src/i18n/*.json"
+  ],
+  "exclude": [
+    "dist/**/*",
+    "node_modules/**/*",
+    "**/*.spec.ts"
+  ]
+}
