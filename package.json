@@ -1,6 +1,6 @@
 {
   "name": "jovo-component-schedule-meeting",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "",
   "main": "dist/src/index",
   "types": "dist/src/index.d.ts",
@@ -15,7 +15,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "googleapis": "^40.0.0",
-    "jovo-framework": "^2.2.11",
+    "jovo-framework": "^3.0.2",
     "moment-timezone": "^0.5.25"
   },
   "devDependencies": {

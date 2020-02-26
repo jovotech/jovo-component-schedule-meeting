@@ -35,6 +35,26 @@ After that, you use the Jovo CLI to transfer the component's files to your proje
 $ jovo load jovo-component-schedule-meeting
 ```
 
+Now, include the component in your `app.js`:
+
+```js
+// @language=typescript
+// src/app.ts
+
+import { ScheduleMeeting } from './components/jovo-component-schedule-meeting';
+
+const ScheduleMeetingComponent = new ScheduleMeeting();
+app.useComponents(ScheduleMeetingComponent);
+
+// @language=javascript
+// src/app.js
+
+const { ScheduleMeeting } = require("../components/jovo-component-schedule-meeting");
+
+const ScheduleMeetingComponent = new ScheduleMeeting();
+app.useComponents(ScheduleMeetingComponent);
+```
+
 The last thing to do, is to set up the Google Calendar integration. For that you have to register the application on the [Google API Console](https://console.developers.google.com/):
 
 ![Google API Console Dashboard](img/google-api-console-dashboard.png)
@@ -102,7 +122,7 @@ That's it for the installation.
 While delegating to the component, you **have** to parse the user's email address in the `data` object:
 
 ```js
-this.delegate('ScheduleMeeting', {
+this.delegate(scheduleMeeting.name, {
     onCompletedIntent: 'xyz',
     data: {
         email: 'xyz@jovo.tech'
