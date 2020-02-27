@@ -43,16 +43,14 @@ Now, include the component in your `app.js`:
 
 import { ScheduleMeeting } from './components/jovo-component-schedule-meeting';
 
-const ScheduleMeetingComponent = new ScheduleMeeting();
-app.useComponents(ScheduleMeetingComponent);
+app.useComponents(new ScheduleMeeting());
 
 // @language=javascript
 // src/app.js
 
 const { ScheduleMeeting } = require("../components/jovo-component-schedule-meeting");
 
-const ScheduleMeetingComponent = new ScheduleMeeting();
-app.useComponents(ScheduleMeetingComponent);
+app.useComponents(new ScheduleMeeting());
 ```
 
 The last thing to do, is to set up the Google Calendar integration. For that you have to register the application on the [Google API Console](https://console.developers.google.com/):
@@ -239,7 +237,7 @@ Example:
 module.exports = {
     // ...
     components: {
-        ScheduleMeeting: {
+        'jovo-component-schedule-meeting': {
             calendarId: `primary`,
             eventLengthInMin: 15,
             intervalTitles: ['Test', 'TestTwo'],
