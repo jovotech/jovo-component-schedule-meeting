@@ -27,7 +27,7 @@
     "source-map-support": "^0.5.8",
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.13.0",
+    "typedoc": "^0.17.4",
     "typescript": "^3.8.3"
   },
   "files": [
