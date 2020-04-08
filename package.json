@@ -2,8 +2,8 @@
   "name": "jovo-component-schedule-meeting",
   "version": "3.0.0",
   "description": "",
-  "main": "dist/src/index",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index",
+  "types": "dist/index.d.ts",
   "scripts": {
     "tslint": "tslint -p tsconfig.json -c tslint.json",
     "tsc": "tsc",
