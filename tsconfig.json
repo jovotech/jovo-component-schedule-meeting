@@ -18,7 +18,8 @@
     "**/*.d.ts",
     "index.ts",
     "src/**/*",
-    "src/i18n/*.json"
+    "src/i18n/*.json",
+    "test/**/*"
   ],
   "exclude": [
     "dist/**/*",
